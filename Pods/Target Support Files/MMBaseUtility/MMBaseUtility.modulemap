@@ -1,0 +1,6 @@
+framework module MMBaseUtility {
+  umbrella header "MMBaseUtility-umbrella.h"
+
+  export *
+  module * { export * }
+}

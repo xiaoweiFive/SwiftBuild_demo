@@ -1,0 +1,87 @@
+PODS:
+  - MMBaseUtility (0.1.4):
+    - MMBaseUtility/DispatchSource (= 0.1.4)
+    - MMBaseUtility/Header (= 0.1.4)
+    - MMBaseUtility/KeyChain (= 0.1.4)
+    - MMBaseUtility/MDLinkedMap (= 0.1.4)
+    - MMBaseUtility/MDQueue (= 0.1.4)
+    - MMBaseUtility/MDStack (= 0.1.4)
+    - MMBaseUtility/MDWeakProxy (= 0.1.4)
+    - MMBaseUtility/MFInetAddress (= 0.1.4)
+    - MMBaseUtility/MMUtility (= 0.1.4)
+    - MMBaseUtility/MultipleThread (= 0.1.4)
+    - MMBaseUtility/PHPhotoLibrary (= 0.1.4)
+    - MMBaseUtility/Timer (= 0.1.4)
+    - MMBaseUtility/UIDevice (= 0.1.4)
+    - MMBaseUtility/Util (= 0.1.4)
+  - MMBaseUtility/DispatchSource (0.1.4):
+    - MMBaseUtility/Header
+  - MMBaseUtility/Header (0.1.4)
+  - MMBaseUtility/KeyChain (0.1.4):
+    - MMBaseUtility/Header
+  - MMBaseUtility/MDLinkedMap (0.1.4):
+    - MMBaseUtility/Header
+  - MMBaseUtility/MDQueue (0.1.4):
+    - MMBaseUtility/Header
+  - MMBaseUtility/MDStack (0.1.4):
+    - MMBaseUtility/Header
+  - MMBaseUtility/MDWeakProxy (0.1.4):
+    - MMBaseUtility/Header
+  - MMBaseUtility/MFInetAddress (0.1.4):
+    - MMBaseUtility/Header
+  - MMBaseUtility/MMUtility (0.1.4):
+    - MMBaseUtility/Header
+  - MMBaseUtility/MultipleThread (0.1.4):
+    - MMBaseUtility/Header
+  - MMBaseUtility/PHPhotoLibrary (0.1.4):
+    - MMBaseUtility/Header
+  - MMBaseUtility/Timer (0.1.4):
+    - MMBaseUtility/Header
+  - MMBaseUtility/UIDevice (0.1.4):
+    - MMBaseUtility/Header
+  - MMBaseUtility/Util (0.1.4):
+    - MMBaseUtility/Header
+  - MMFrameManager (0.1.9.2):
+    - MMBaseUtility
+  - MMSBaseFoundation (0.0.13)
+  - MMSUIBaseFoundation (0.0.13):
+    - MMFrameManager
+  - Protobuf (3.21.4)
+  - SSZipArchive (2.4.3)
+  - SVGAPlayer (2.5.7):
+    - SVGAPlayer/Core (= 2.5.7)
+    - SVGAPlayer/ProtoFiles (= 2.5.7)
+  - SVGAPlayer/Core (2.5.7):
+    - SSZipArchive (>= 1.8.1)
+    - SVGAPlayer/ProtoFiles
+  - SVGAPlayer/ProtoFiles (2.5.7):
+    - Protobuf (~> 3.4)
+
+DEPENDENCIES:
+  - MMSBaseFoundation (= 0.0.13)
+  - MMSUIBaseFoundation (= 0.0.13)
+  - SVGAPlayer
+
+SPEC REPOS:
+  https://git.wemomo.com/ios/Specs.git:
+    - MMBaseUtility
+    - MMFrameManager
+    - MMSBaseFoundation
+    - MMSUIBaseFoundation
+  trunk:
+    - Protobuf
+    - SSZipArchive
+    - SVGAPlayer
+
+SPEC CHECKSUMS:
+  MMBaseUtility: dfdf6ae3b2930edba2404f24693627f984da99d9
+  MMFrameManager: d854789f04e41ea217ec720d1bd53fb9b2208809
+  MMSBaseFoundation: 6f9dd7bc60aa344e7aaeee5af3d05fea0edb6714
+  MMSUIBaseFoundation: 150846531f1613d339edcd7e36e91ad8933f48ad
+  Protobuf: 85a48c73d708782e2869564c0438e211aae98e7a
+  SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
+  SVGAPlayer: 318b85a78b61292d6ae9dfcd651f3f0d1cdadd86
+
+PODFILE CHECKSUM: 9902bc86ef77a4c726f4eb6c527837940260985b
+
+COCOAPODS: 1.11.2

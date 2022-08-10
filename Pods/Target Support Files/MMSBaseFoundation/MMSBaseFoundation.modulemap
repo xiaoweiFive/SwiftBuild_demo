@@ -1,0 +1,6 @@
+framework module MMSBaseFoundation {
+  umbrella header "MMSBaseFoundation-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,678 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E50F15000004E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50F15000004D0 /* Foundation.framework */; };
+		E50F15000004F0 /* MMSFIFOQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F15000000D0 /* MMSFIFOQueue.swift */; };
+		E50F1500000500 /* MMSWeakSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F15000000E0 /* MMSWeakSet.swift */; };
+		E50F1500000510 /* Array+MMSExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000100 /* Array+MMSExt.swift */; };
+		E50F1500000520 /* Bool+MMSExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000110 /* Bool+MMSExt.swift */; };
+		E50F1500000530 /* Collection+MMSExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000120 /* Collection+MMSExt.swift */; };
+		E50F1500000540 /* Date+MMSExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000130 /* Date+MMSExt.swift */; };
+		E50F1500000550 /* Dictionary+MMSExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000140 /* Dictionary+MMSExt.swift */; };
+		E50F1500000560 /* DispatchQueue+MMSExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000150 /* DispatchQueue+MMSExt.swift */; };
+		E50F1500000570 /* Int+MMSExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000160 /* Int+MMSExt.swift */; };
+		E50F1500000580 /* NotificationCenter+MMSExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000170 /* NotificationCenter+MMSExtention.swift */; };
+		E50F1500000590 /* Optional+Nonnull.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000180 /* Optional+Nonnull.swift */; };
+		E50F15000005A0 /* String+MMSExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000190 /* String+MMSExt.swift */; };
+		E50F15000005B0 /* String+MMSJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F15000001A0 /* String+MMSJson.swift */; };
+		E50F15000005C0 /* URL+MMSExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F15000001B0 /* URL+MMSExt.swift */; };
+		E50F15000005D0 /* MMSDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F15000001D0 /* MMSDelegate.swift */; };
+		E50F15000005E0 /* MMSDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F15000001E0 /* MMSDevice.swift */; };
+		E50F15000005F0 /* MMSSourceTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F15000001F0 /* MMSSourceTimer.swift */; };
+		E50F1500000600 /* MMSUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000200 /* MMSUtil.swift */; };
+		E50F1500000610 /* OperatorFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000210 /* OperatorFunction.swift */; };
+		E50F1500000620 /* MMSJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000230 /* MMSJSON.swift */; };
+		E50F1500000630 /* MMSWraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000250 /* MMSWraper.swift */; };
+		E50F1500000640 /* MMSHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000280 /* MMSHeap.swift */; };
+		E50F1500000650 /* MMSLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F15000002A0 /* MMSLinkedList.swift */; };
+		E50F1500000660 /* MMSPriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F15000002C0 /* MMSPriorityQueue.swift */; };
+		E50F1500000670 /* MMSStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F15000002E0 /* MMSStack.swift */; };
+		E50F1500000680 /* MMSChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000300 /* MMSChain.swift */; };
+		E50F1500000690 /* MMSDebouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000310 /* MMSDebouncer.swift */; };
+		E50F15000006A0 /* MMSTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000320 /* MMSTool.swift */; };
+		E50F15000006B0 /* MMSCapitalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000340 /* MMSCapitalized.swift */; };
+		E50F15000006C0 /* MMSClamping.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000350 /* MMSClamping.swift */; };
+		E50F15000006D0 /* MMSDateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000360 /* MMSDateValue.swift */; };
+		E50F15000006E0 /* MMSDefaultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000370 /* MMSDefaultModel.swift */; };
+		E50F15000006F0 /* MMSDefaultValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000380 /* MMSDefaultValue.swift */; };
+		E50F1500000700 /* MMSEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000390 /* MMSEmail.swift */; };
+		E50F1500000710 /* MMSExpirableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F15000003A0 /* MMSExpirableValue.swift */; };
+		E50F1500000720 /* MMSLosslessValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F15000003B0 /* MMSLosslessValue.swift */; };
+		E50F1500000730 /* MMSLossyArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F15000003C0 /* MMSLossyArray.swift */; };
+		E50F1500000740 /* MMSLossyDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F15000003D0 /* MMSLossyDictionary.swift */; };
+		E50F1500000750 /* MMSNilPositioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F15000003E0 /* MMSNilPositioning.swift */; };
+		E50F1500000760 /* MMSRecordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F15000003F0 /* MMSRecordData.swift */; };
+		E50F1500000770 /* MMSRGBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000400 /* MMSRGBColor.swift */; };
+		E50F1500000780 /* MMSTrimmed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000410 /* MMSTrimmed.swift */; };
+		E50F1500000790 /* MMSWrapType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000420 /* MMSWrapType.swift */; };
+		E50F15000007F0 /* MMSBaseFoundation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E50F15000007E0 /* MMSBaseFoundation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E50F1500000820 /* MMSBaseFoundation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E50F1500000810 /* MMSBaseFoundation-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		18D288A6475E1CBE8BFA80AAE36CB8C9 /* MMSBaseFoundation */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MMSBaseFoundation; path = MMSBaseFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E50F15000000D0 /* MMSFIFOQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSFIFOQueue.swift; sourceTree = "<group>"; };
+		E50F15000000E0 /* MMSWeakSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSWeakSet.swift; sourceTree = "<group>"; };
+		E50F1500000100 /* Array+MMSExt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+MMSExt.swift"; sourceTree = "<group>"; };
+		E50F1500000110 /* Bool+MMSExt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Bool+MMSExt.swift"; sourceTree = "<group>"; };
+		E50F1500000120 /* Collection+MMSExt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Collection+MMSExt.swift"; sourceTree = "<group>"; };
+		E50F1500000130 /* Date+MMSExt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+MMSExt.swift"; sourceTree = "<group>"; };
+		E50F1500000140 /* Dictionary+MMSExt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Dictionary+MMSExt.swift"; sourceTree = "<group>"; };
+		E50F1500000150 /* DispatchQueue+MMSExt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+MMSExt.swift"; sourceTree = "<group>"; };
+		E50F1500000160 /* Int+MMSExt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Int+MMSExt.swift"; sourceTree = "<group>"; };
+		E50F1500000170 /* NotificationCenter+MMSExtention.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+MMSExtention.swift"; sourceTree = "<group>"; };
+		E50F1500000180 /* Optional+Nonnull.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Optional+Nonnull.swift"; sourceTree = "<group>"; };
+		E50F1500000190 /* String+MMSExt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+MMSExt.swift"; sourceTree = "<group>"; };
+		E50F15000001A0 /* String+MMSJson.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+MMSJson.swift"; sourceTree = "<group>"; };
+		E50F15000001B0 /* URL+MMSExt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "URL+MMSExt.swift"; sourceTree = "<group>"; };
+		E50F15000001D0 /* MMSDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSDelegate.swift; sourceTree = "<group>"; };
+		E50F15000001E0 /* MMSDevice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSDevice.swift; sourceTree = "<group>"; };
+		E50F15000001F0 /* MMSSourceTimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSSourceTimer.swift; sourceTree = "<group>"; };
+		E50F1500000200 /* MMSUtil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSUtil.swift; sourceTree = "<group>"; };
+		E50F1500000210 /* OperatorFunction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OperatorFunction.swift; sourceTree = "<group>"; };
+		E50F1500000230 /* MMSJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSJSON.swift; sourceTree = "<group>"; };
+		E50F1500000250 /* MMSWraper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSWraper.swift; sourceTree = "<group>"; };
+		E50F1500000280 /* MMSHeap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSHeap.swift; sourceTree = "<group>"; };
+		E50F15000002A0 /* MMSLinkedList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSLinkedList.swift; sourceTree = "<group>"; };
+		E50F15000002C0 /* MMSPriorityQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSPriorityQueue.swift; sourceTree = "<group>"; };
+		E50F15000002E0 /* MMSStack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSStack.swift; sourceTree = "<group>"; };
+		E50F1500000300 /* MMSChain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSChain.swift; sourceTree = "<group>"; };
+		E50F1500000310 /* MMSDebouncer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSDebouncer.swift; sourceTree = "<group>"; };
+		E50F1500000320 /* MMSTool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSTool.swift; sourceTree = "<group>"; };
+		E50F1500000340 /* MMSCapitalized.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSCapitalized.swift; sourceTree = "<group>"; };
+		E50F1500000350 /* MMSClamping.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSClamping.swift; sourceTree = "<group>"; };
+		E50F1500000360 /* MMSDateValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSDateValue.swift; sourceTree = "<group>"; };
+		E50F1500000370 /* MMSDefaultModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSDefaultModel.swift; sourceTree = "<group>"; };
+		E50F1500000380 /* MMSDefaultValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSDefaultValue.swift; sourceTree = "<group>"; };
+		E50F1500000390 /* MMSEmail.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSEmail.swift; sourceTree = "<group>"; };
+		E50F15000003A0 /* MMSExpirableValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSExpirableValue.swift; sourceTree = "<group>"; };
+		E50F15000003B0 /* MMSLosslessValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSLosslessValue.swift; sourceTree = "<group>"; };
+		E50F15000003C0 /* MMSLossyArray.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSLossyArray.swift; sourceTree = "<group>"; };
+		E50F15000003D0 /* MMSLossyDictionary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSLossyDictionary.swift; sourceTree = "<group>"; };
+		E50F15000003E0 /* MMSNilPositioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSNilPositioning.swift; sourceTree = "<group>"; };
+		E50F15000003F0 /* MMSRecordData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSRecordData.swift; sourceTree = "<group>"; };
+		E50F1500000400 /* MMSRGBColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSRGBColor.swift; sourceTree = "<group>"; };
+		E50F1500000410 /* MMSTrimmed.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSTrimmed.swift; sourceTree = "<group>"; };
+		E50F1500000420 /* MMSWrapType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMSWrapType.swift; sourceTree = "<group>"; };
+		E50F15000004D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E50F15000007B0 /* MMSBaseFoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMSBaseFoundation.debug.xcconfig; sourceTree = "<group>"; };
+		E50F15000007C0 /* MMSBaseFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMSBaseFoundation.release.xcconfig; sourceTree = "<group>"; };
+		E50F15000007D0 /* MMSBaseFoundation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MMSBaseFoundation.modulemap; sourceTree = "<group>"; };
+		E50F15000007E0 /* MMSBaseFoundation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMSBaseFoundation-umbrella.h"; sourceTree = "<group>"; };
+		E50F1500000800 /* MMSBaseFoundation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MMSBaseFoundation-Info.plist"; sourceTree = "<group>"; };
+		E50F1500000810 /* MMSBaseFoundation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMSBaseFoundation-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E50F15000004A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E50F15000004E0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E50F1500000010 = {
+			isa = PBXGroup;
+			children = (
+				E50F1500000060 /* Frameworks */,
+				E50F15000000B0 /* MMSBaseFoundation */,
+				E50F1500000020 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E50F1500000020 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18D288A6475E1CBE8BFA80AAE36CB8C9 /* MMSBaseFoundation */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E50F1500000060 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E50F15000004C0 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E50F15000000B0 /* MMSBaseFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				E50F15000000C0 /* Collection */,
+				E50F15000000F0 /* Extention */,
+				E50F15000001C0 /* Function */,
+				E50F1500000220 /* MMSJSON */,
+				E50F1500000240 /* Namespace */,
+				E50F1500000260 /* StructAndAlgorithm */,
+				E50F15000007A0 /* Support Files */,
+				E50F15000002F0 /* Tools */,
+				E50F1500000330 /* Wrapper */,
+			);
+			name = MMSBaseFoundation;
+			path = MMSBaseFoundation;
+			sourceTree = "<group>";
+		};
+		E50F15000000C0 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				E50F15000000D0 /* MMSFIFOQueue.swift */,
+				E50F15000000E0 /* MMSWeakSet.swift */,
+			);
+			name = Collection;
+			path = Source/Collection;
+			sourceTree = "<group>";
+		};
+		E50F15000000F0 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				E50F1500000100 /* Array+MMSExt.swift */,
+				E50F1500000110 /* Bool+MMSExt.swift */,
+				E50F1500000120 /* Collection+MMSExt.swift */,
+				E50F1500000130 /* Date+MMSExt.swift */,
+				E50F1500000140 /* Dictionary+MMSExt.swift */,
+				E50F1500000150 /* DispatchQueue+MMSExt.swift */,
+				E50F1500000160 /* Int+MMSExt.swift */,
+				E50F1500000170 /* NotificationCenter+MMSExtention.swift */,
+				E50F1500000180 /* Optional+Nonnull.swift */,
+				E50F1500000190 /* String+MMSExt.swift */,
+				E50F15000001A0 /* String+MMSJson.swift */,
+				E50F15000001B0 /* URL+MMSExt.swift */,
+			);
+			name = Extention;
+			path = Source/Extention;
+			sourceTree = "<group>";
+		};
+		E50F15000001C0 /* Function */ = {
+			isa = PBXGroup;
+			children = (
+				E50F15000001D0 /* MMSDelegate.swift */,
+				E50F15000001E0 /* MMSDevice.swift */,
+				E50F15000001F0 /* MMSSourceTimer.swift */,
+				E50F1500000200 /* MMSUtil.swift */,
+				E50F1500000210 /* OperatorFunction.swift */,
+			);
+			name = Function;
+			path = Source/Function;
+			sourceTree = "<group>";
+		};
+		E50F1500000220 /* MMSJSON */ = {
+			isa = PBXGroup;
+			children = (
+				E50F1500000230 /* MMSJSON.swift */,
+			);
+			name = MMSJSON;
+			path = Source/MMSJSON;
+			sourceTree = "<group>";
+		};
+		E50F1500000240 /* Namespace */ = {
+			isa = PBXGroup;
+			children = (
+				E50F1500000250 /* MMSWraper.swift */,
+			);
+			name = Namespace;
+			path = Source/Namespace;
+			sourceTree = "<group>";
+		};
+		E50F1500000260 /* StructAndAlgorithm */ = {
+			isa = PBXGroup;
+			children = (
+				E50F1500000270 /* Heep */,
+				E50F1500000290 /* LinkedList */,
+				E50F15000002B0 /* PriorityQueue */,
+				E50F15000002D0 /* Stack */,
+			);
+			name = StructAndAlgorithm;
+			path = Source/StructAndAlgorithm;
+			sourceTree = "<group>";
+		};
+		E50F1500000270 /* Heep */ = {
+			isa = PBXGroup;
+			children = (
+				E50F1500000280 /* MMSHeap.swift */,
+			);
+			name = Heep;
+			path = Heep;
+			sourceTree = "<group>";
+		};
+		E50F1500000290 /* LinkedList */ = {
+			isa = PBXGroup;
+			children = (
+				E50F15000002A0 /* MMSLinkedList.swift */,
+			);
+			name = LinkedList;
+			path = LinkedList;
+			sourceTree = "<group>";
+		};
+		E50F15000002B0 /* PriorityQueue */ = {
+			isa = PBXGroup;
+			children = (
+				E50F15000002C0 /* MMSPriorityQueue.swift */,
+			);
+			name = PriorityQueue;
+			path = PriorityQueue;
+			sourceTree = "<group>";
+		};
+		E50F15000002D0 /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				E50F15000002E0 /* MMSStack.swift */,
+			);
+			name = Stack;
+			path = Stack;
+			sourceTree = "<group>";
+		};
+		E50F15000002F0 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				E50F1500000300 /* MMSChain.swift */,
+				E50F1500000310 /* MMSDebouncer.swift */,
+				E50F1500000320 /* MMSTool.swift */,
+			);
+			name = Tools;
+			path = Source/Tools;
+			sourceTree = "<group>";
+		};
+		E50F1500000330 /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				E50F1500000340 /* MMSCapitalized.swift */,
+				E50F1500000350 /* MMSClamping.swift */,
+				E50F1500000360 /* MMSDateValue.swift */,
+				E50F1500000370 /* MMSDefaultModel.swift */,
+				E50F1500000380 /* MMSDefaultValue.swift */,
+				E50F1500000390 /* MMSEmail.swift */,
+				E50F15000003A0 /* MMSExpirableValue.swift */,
+				E50F15000003B0 /* MMSLosslessValue.swift */,
+				E50F15000003C0 /* MMSLossyArray.swift */,
+				E50F15000003D0 /* MMSLossyDictionary.swift */,
+				E50F15000003E0 /* MMSNilPositioning.swift */,
+				E50F15000003F0 /* MMSRecordData.swift */,
+				E50F1500000400 /* MMSRGBColor.swift */,
+				E50F1500000410 /* MMSTrimmed.swift */,
+				E50F1500000420 /* MMSWrapType.swift */,
+			);
+			name = Wrapper;
+			path = Source/Wrapper;
+			sourceTree = "<group>";
+		};
+		E50F15000004C0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E50F15000004D0 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E50F15000007A0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E50F15000007D0 /* MMSBaseFoundation.modulemap */,
+				E50F1500000810 /* MMSBaseFoundation-dummy.m */,
+				E50F1500000800 /* MMSBaseFoundation-Info.plist */,
+				E50F15000007E0 /* MMSBaseFoundation-umbrella.h */,
+				E50F15000007B0 /* MMSBaseFoundation.debug.xcconfig */,
+				E50F15000007C0 /* MMSBaseFoundation.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MMSBaseFoundation";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E50F1500000480 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E50F15000007F0 /* MMSBaseFoundation-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		33154841A1C05C0971E32F51D33C36FF /* MMSBaseFoundation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E50F1500000440 /* Build configuration list for PBXNativeTarget "MMSBaseFoundation" */;
+			buildPhases = (
+				E50F1500000480 /* Headers */,
+				E50F1500000490 /* Sources */,
+				E50F15000004A0 /* Frameworks */,
+				E50F15000004B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MMSBaseFoundation;
+			productName = MMSBaseFoundation;
+			productReference = 18D288A6475E1CBE8BFA80AAE36CB8C9 /* MMSBaseFoundation */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E50F1500000000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = E50F1500000030 /* Build configuration list for PBXProject "MMSBaseFoundation" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = E50F1500000010;
+			productRefGroup = E50F1500000020 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				33154841A1C05C0971E32F51D33C36FF /* MMSBaseFoundation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E50F15000004B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E50F1500000490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E50F1500000510 /* Array+MMSExt.swift in Sources */,
+				E50F1500000520 /* Bool+MMSExt.swift in Sources */,
+				E50F1500000530 /* Collection+MMSExt.swift in Sources */,
+				E50F1500000540 /* Date+MMSExt.swift in Sources */,
+				E50F1500000550 /* Dictionary+MMSExt.swift in Sources */,
+				E50F1500000560 /* DispatchQueue+MMSExt.swift in Sources */,
+				E50F1500000570 /* Int+MMSExt.swift in Sources */,
+				E50F1500000820 /* MMSBaseFoundation-dummy.m in Sources */,
+				E50F15000006B0 /* MMSCapitalized.swift in Sources */,
+				E50F1500000680 /* MMSChain.swift in Sources */,
+				E50F15000006C0 /* MMSClamping.swift in Sources */,
+				E50F15000006D0 /* MMSDateValue.swift in Sources */,
+				E50F1500000690 /* MMSDebouncer.swift in Sources */,
+				E50F15000006E0 /* MMSDefaultModel.swift in Sources */,
+				E50F15000006F0 /* MMSDefaultValue.swift in Sources */,
+				E50F15000005D0 /* MMSDelegate.swift in Sources */,
+				E50F15000005E0 /* MMSDevice.swift in Sources */,
+				E50F1500000700 /* MMSEmail.swift in Sources */,
+				E50F1500000710 /* MMSExpirableValue.swift in Sources */,
+				E50F15000004F0 /* MMSFIFOQueue.swift in Sources */,
+				E50F1500000640 /* MMSHeap.swift in Sources */,
+				E50F1500000620 /* MMSJSON.swift in Sources */,
+				E50F1500000650 /* MMSLinkedList.swift in Sources */,
+				E50F1500000720 /* MMSLosslessValue.swift in Sources */,
+				E50F1500000730 /* MMSLossyArray.swift in Sources */,
+				E50F1500000740 /* MMSLossyDictionary.swift in Sources */,
+				E50F1500000750 /* MMSNilPositioning.swift in Sources */,
+				E50F1500000660 /* MMSPriorityQueue.swift in Sources */,
+				E50F1500000760 /* MMSRecordData.swift in Sources */,
+				E50F1500000770 /* MMSRGBColor.swift in Sources */,
+				E50F15000005F0 /* MMSSourceTimer.swift in Sources */,
+				E50F1500000670 /* MMSStack.swift in Sources */,
+				E50F15000006A0 /* MMSTool.swift in Sources */,
+				E50F1500000780 /* MMSTrimmed.swift in Sources */,
+				E50F1500000600 /* MMSUtil.swift in Sources */,
+				E50F1500000500 /* MMSWeakSet.swift in Sources */,
+				E50F1500000630 /* MMSWraper.swift in Sources */,
+				E50F1500000790 /* MMSWrapType.swift in Sources */,
+				E50F1500000580 /* NotificationCenter+MMSExtention.swift in Sources */,
+				E50F1500000610 /* OperatorFunction.swift in Sources */,
+				E50F1500000590 /* Optional+Nonnull.swift in Sources */,
+				E50F15000005A0 /* String+MMSExt.swift in Sources */,
+				E50F15000005B0 /* String+MMSJson.swift in Sources */,
+				E50F15000005C0 /* URL+MMSExt.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E50F1500000040 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E50F1500000050 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		E50F1500000450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E50F15000007C0 /* MMSBaseFoundation.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/MMSBaseFoundation/MMSBaseFoundation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/MMSBaseFoundation/MMSBaseFoundation.modulemap";
+				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
+				PRODUCT_MODULE_NAME = MMSBaseFoundation;
+				PRODUCT_NAME = MMSBaseFoundation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E50F1500000460 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E50F15000007B0 /* MMSBaseFoundation.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/MMSBaseFoundation/MMSBaseFoundation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/MMSBaseFoundation/MMSBaseFoundation.modulemap";
+				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
+				PRODUCT_MODULE_NAME = MMSBaseFoundation;
+				PRODUCT_NAME = MMSBaseFoundation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E50F1500000030 /* Build configuration list for PBXProject "MMSBaseFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E50F1500000040 /* Debug */,
+				E50F1500000050 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E50F1500000440 /* Build configuration list for PBXNativeTarget "MMSBaseFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E50F1500000460 /* Debug */,
+				E50F1500000450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E50F1500000000 /* Project object */;
+}

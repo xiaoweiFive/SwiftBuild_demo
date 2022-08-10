@@ -1,0 +1,6 @@
+framework module MMSUIBaseFoundation {
+  umbrella header "MMSUIBaseFoundation-umbrella.h"
+
+  export *
+  module * { export * }
+}
