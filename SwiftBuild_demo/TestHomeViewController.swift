@@ -70,7 +70,7 @@ import MMBaseUtility
         let headerview = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 60))
         
         self.tableView = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
-        self.tableView?.backgroundColor = hex("#F9FF11FF")
+        self.tableView?.backgroundColor = .red
         self.tableView?.separatorStyle = .none
         self.tableView?.isScrollEnabled = false
         self.tableView?.delegate = self
