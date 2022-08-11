@@ -40,19 +40,19 @@ import MMBaseUtility
         super.viewDidLoad()
 
 
-        let parser = SVGAParser()
-        if let url = URL(string: "https://s.momocdn.com/s1/u/cfcjefjej/card_recv2.svga") {
-            parser.parse(with: url) { [weak self] (videoItem) in
-                if let weakSelf = self {
-
-                    print("========parser success")
-                }
-            } failureBlock: { (error) in
-                if let error = error {
-                    print(error)
-                }
-            }
-        }
+//        let parser = SVGAParser()
+//        if let url = URL(string: "https://s.momocdn.com/s1/u/cfcjefjej/card_recv2.svga") {
+//            parser.parse(with: url) { [weak self] (videoItem) in
+//                if let weakSelf = self {
+//
+//                    print("========parser success")
+//                }
+//            } failureBlock: { (error) in
+//                if let error = error {
+//                    print(error)
+//                }
+//            }
+//        }
         
         
         
