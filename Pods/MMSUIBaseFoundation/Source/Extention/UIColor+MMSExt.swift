@@ -7,61 +7,63 @@
 //
 
 import UIKit
-
-/// 16进制数字转换为颜色(0xAARRGGBB, 0xRRGGBB)
-public func hex(_ value: Int) -> UIColor {
-    
-    var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0;
-    var a: CGFloat = 0xFF
-    var rgb = value
-
-    //带alpha值的8位hex (0xAARRGGBB)
-    if value & 0xFF000000 > 0 {
-        a = CGFloat((value & 0xFF000000) >> 24)
-        rgb = value & 0x00FFFFFF
-    }
-    r = CGFloat((rgb & 0x00FF0000) >> 16)
-    g = CGFloat((rgb & 0x0000FF00) >> 8)
-    b = CGFloat(rgb & 0x000000FF)
-    
-    
-    //print("r:%X g:%X b:%X a:%X", r, g, b, a)
-    
-    return UIColor(red: CGFloat(r) / 255.0,
-                   green: CGFloat(g) / 255.0,
-                   blue: CGFloat(b) / 255.0,
-                   alpha: CGFloat(a) / 255.0)
-}
-
-/// 16进制字符串转换`UIColor`, 兼容 “0xARGB”、“0xRGB”
-public func hex(_ value: String) -> UIColor {
-    
-    var hexString = ""
-    if value.lowercased().hasPrefix("0x") {
-        hexString = value.lowercased().replacingOccurrences(of: "0x", with: "")
-    }
-    else if value.hasPrefix("#") {
-        hexString = value.replacingOccurrences(of: "#", with: "")
-    }
-    else {
-        hexString = value
-    }
-    
-    if hexString.count <= 4 {
-        guard let hexInt = Int(hexString, radix: 16) else {
-            return UIColor.clear
-        }
-        
-        return shortHex(hexInt)
-    }
-    else {
-        guard let hexInt = Int(hexString, radix: 16) else {
-            return UIColor.clear
-        }
-        
-        return hex(hexInt)
-    }
-}
+//
+///// 16进制数字转换为颜色(0xAARRGGBB, 0xRRGGBB)
+//public func hex(_ value: Int) -> UIColor {
+//
+//    var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0;
+//    var a: CGFloat = 0xFF
+//    var rgb = value
+//
+//    //带alpha值的8位hex (0xAARRGGBB)
+//    if value & 0xFF000000 > 0 {
+//        a = CGFloat((value & 0xFF000000) >> 24)
+//        rgb = value & 0x00FFFFFF
+//    }
+//    print("===r:%X g:%X b:%X a:%X", r, g, b, a)
+//
+//    r = CGFloat((rgb & 0x00FF0000) >> 16)
+//    g = CGFloat((rgb & 0x0000FF00) >> 8)
+//    b = CGFloat(rgb & 0x000000FF)
+//
+//
+//    print("----r:%X g:%X b:%X a:%X", r, g, b, a)
+//
+//    return UIColor(red: CGFloat(r) / 255.0,
+//                   green: CGFloat(g) / 255.0,
+//                   blue: CGFloat(b) / 255.0,
+//                   alpha: CGFloat(a) / 255.0)
+//}
+//
+///// 16进制字符串转换`UIColor`, 兼容 “0xARGB”、“0xRGB”
+//public func hex(_ value: String) -> UIColor {
+//
+//    var hexString = ""
+//    if value.lowercased().hasPrefix("0x") {
+//        hexString = value.lowercased().replacingOccurrences(of: "0x", with: "")
+//    }
+//    else if value.hasPrefix("#") {
+//        hexString = value.replacingOccurrences(of: "#", with: "")
+//    }
+//    else {
+//        hexString = value
+//    }
+//
+//    if hexString.count <= 4 {
+//        guard let hexInt = Int(hexString, radix: 16) else {
+//            return UIColor.clear
+//        }
+//
+//        return shortHex(hexInt)
+//    }
+//    else {
+//        guard let hexInt = Int(hexString, radix: 16) else {
+//            return UIColor.clear
+//        }
+//
+//        return hex(hexInt)
+//    }
+//}
 
 /// 3-4位hex，如0xARGB、0xRGB
 public func shortHex(_ value: Int) -> UIColor {

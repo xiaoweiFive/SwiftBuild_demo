@@ -64,7 +64,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   MMSUIBaseFoundation:
-    :commit: 7b69e38df18afdbef680a3e235809c5e810f78b5
+    :commit: bbb3a841f48ae151e08ffd53ce2a827987ea5d91
     :git: https://git.wemomo.com/ios/BaseFoundationLayer/MMSUIBaseFoundation.git
 
 SPEC CHECKSUMS:
