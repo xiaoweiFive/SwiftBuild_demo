@@ -32,7 +32,7 @@ target :SwiftBuild_demo do
   pod 'MMSUIBaseFoundation', :git => 'https://git.wemomo.com/ios/BaseFoundationLayer/MMSUIBaseFoundation.git', :branch => 'jenkins_test'
 #    pod 'MMSUIBaseFoundation',
     pod 'MMSBaseFoundation', '0.0.13'
-    pod 'SVGAPlayer'
+#    pod 'SVGAPlayer'
 
 end
 

@@ -9,7 +9,7 @@ import UIKit
 import MMSUIBaseFoundation
 import MMFrameManager
 import MMBaseUtility
-import SVGAPlayer
+//import SVGAPlayer
 
 @objc class TestHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,16 +24,16 @@ import SVGAPlayer
     }
     
     var tableView: UITableView?
-    fileprivate lazy var svgaPlyerView = createSvgaPlyerView()
+//    fileprivate lazy var svgaPlyerView = createSvgaPlyerView()
 
     
-    private func createSvgaPlyerView() -> SVGAPlayer {
-        let svgaPlayerView = SVGAPlayer(frame: CGRect(x: 10, y: 60, width: 270, height: 99))
-        svgaPlayerView.contentMode = .scaleAspectFill
-        svgaPlayerView.clearsAfterStop = false
-        svgaPlayerView.loops = 1
-        return svgaPlayerView
-    }
+//    private func createSvgaPlyerView() -> SVGAPlayer {
+//        let svgaPlayerView = SVGAPlayer(frame: CGRect(x: 10, y: 60, width: 270, height: 99))
+//        svgaPlayerView.contentMode = .scaleAspectFill
+//        svgaPlayerView.clearsAfterStop = false
+//        svgaPlayerView.loops = 1
+//        return svgaPlayerView
+//    }
     
     
     override func viewDidLoad() {
@@ -57,7 +57,8 @@ import SVGAPlayer
         
         
         
-        self.view.backgroundColor = .brown
+        self.view.backgroundColor = .blue
+        
         // Do any additional setup after loading the view.
         myname("111", 2)
         
@@ -69,7 +70,7 @@ import SVGAPlayer
         let headerview = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 60))
         
         self.tableView = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
-        self.tableView?.backgroundColor = .red
+        self.tableView?.backgroundColor = hex("#F9FF11FF")
         self.tableView?.separatorStyle = .none
         self.tableView?.isScrollEnabled = false
         self.tableView?.delegate = self
