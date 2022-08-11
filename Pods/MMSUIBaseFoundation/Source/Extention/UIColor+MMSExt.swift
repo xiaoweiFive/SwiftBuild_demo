@@ -11,19 +11,19 @@ import UIKit
 /// 16进制数字转换为颜色(0xAARRGGBB, 0xRRGGBB)
 public func hex(_ value: Int) -> UIColor {
     
-    var r: Int = 0, g: Int = 0, b: Int = 0;
-    var a: Int = 0xFF
+    var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0;
+    var a: CGFloat = 0xFF
     var rgb = value
-    
+
     //带alpha值的8位hex (0xAARRGGBB)
     if value & 0xFF000000 > 0 {
-        a = (value & 0xFF000000) >> 24
+        a = CGFloat((value & 0xFF000000) >> 24)
         rgb = value & 0x00FFFFFF
     }
+    r = CGFloat((rgb & 0x00FF0000) >> 16)
+    g = CGFloat((rgb & 0x0000FF00) >> 8)
+    b = CGFloat(rgb & 0x000000FF)
     
-    r = (rgb & 0x00FF0000) >> 16
-    g = (rgb & 0x0000FF00) >> 8
-    b = rgb & 0x000000FF
     
     //print("r:%X g:%X b:%X a:%X", r, g, b, a)
     

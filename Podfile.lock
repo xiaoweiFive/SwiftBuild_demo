@@ -46,7 +46,7 @@ PODS:
   - MMSBaseFoundation (0.0.13)
   - MMSUIBaseFoundation (0.0.13):
     - MMFrameManager
-  - Protobuf (3.21.4)
+  - Protobuf (3.21.5)
   - SSZipArchive (2.4.3)
   - SVGAPlayer (2.5.7):
     - SVGAPlayer/Core (= 2.5.7)
@@ -59,7 +59,7 @@ PODS:
 
 DEPENDENCIES:
   - MMSBaseFoundation (= 0.0.13)
-  - MMSUIBaseFoundation (= 0.0.13)
+  - MMSUIBaseFoundation (from `https://git.wemomo.com/ios/BaseFoundationLayer/MMSUIBaseFoundation.git`, branch `jenkins_test`)
   - SVGAPlayer
 
 SPEC REPOS:
@@ -67,21 +67,30 @@ SPEC REPOS:
     - MMBaseUtility
     - MMFrameManager
     - MMSBaseFoundation
-    - MMSUIBaseFoundation
   trunk:
     - Protobuf
     - SSZipArchive
     - SVGAPlayer
 
+EXTERNAL SOURCES:
+  MMSUIBaseFoundation:
+    :branch: jenkins_test
+    :git: https://git.wemomo.com/ios/BaseFoundationLayer/MMSUIBaseFoundation.git
+
+CHECKOUT OPTIONS:
+  MMSUIBaseFoundation:
+    :commit: 7b69e38df18afdbef680a3e235809c5e810f78b5
+    :git: https://git.wemomo.com/ios/BaseFoundationLayer/MMSUIBaseFoundation.git
+
 SPEC CHECKSUMS:
   MMBaseUtility: dfdf6ae3b2930edba2404f24693627f984da99d9
   MMFrameManager: d854789f04e41ea217ec720d1bd53fb9b2208809
   MMSBaseFoundation: 6f9dd7bc60aa344e7aaeee5af3d05fea0edb6714
-  MMSUIBaseFoundation: 150846531f1613d339edcd7e36e91ad8933f48ad
-  Protobuf: 85a48c73d708782e2869564c0438e211aae98e7a
+  MMSUIBaseFoundation: aa4b85977376268a65045b43cd5de241f29f4f4a
+  Protobuf: 7504b04fffcf6662ad629694db8231f5e744327f
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
   SVGAPlayer: 318b85a78b61292d6ae9dfcd651f3f0d1cdadd86
 
-PODFILE CHECKSUM: 9902bc86ef77a4c726f4eb6c527837940260985b
+PODFILE CHECKSUM: 0182dfe492620750b58cc4936d8b28dc071499c8
 
 COCOAPODS: 1.11.2

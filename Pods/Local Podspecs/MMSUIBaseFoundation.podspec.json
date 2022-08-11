@@ -1,0 +1,48 @@
+{
+  "name": "MMSUIBaseFoundation",
+  "version": "0.0.13",
+  "summary": "UI层",
+  "description": "UI层基础库、常用扩展",
+  "homepage": "https://git.wemomo.com/ios/BaseFoundationLayer/MMSUIBaseFoundation",
+  "license": "MIT",
+  "authors": {
+    "fu.xianchao": "fu.xianchao@immomo.com",
+    "ji.linlin": "ji.linlin@immomo.com"
+  },
+  "source": {
+    "git": "https://git.wemomo.com/ios/BaseFoundationLayer/MMSUIBaseFoundation.git",
+    "tag": "0.0.13"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "requires_arc": true,
+  "prefix_header_file": false,
+  "swift_versions": [
+    "4.2",
+    "5.0",
+    "5.1",
+    "5.2",
+    "5.3"
+  ],
+  "source_files": "Source/**/*.{h,m,swift}",
+  "header_mappings_dir": "Source",
+  "module_name": "MMSUIBaseFoundation",
+  "header_dir": "Source",
+  "pod_target_xcconfig": {
+    "DEFINES_MODULE": "YES"
+  },
+  "dependencies": {
+    "MMFrameManager": [
+
+    ]
+  },
+  "testspecs": [
+    {
+      "name": "Tests",
+      "test_type": "unit",
+      "source_files": "Test/*"
+    }
+  ],
+  "swift_version": "5.3"
+}
