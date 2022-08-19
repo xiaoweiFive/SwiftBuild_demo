@@ -36,13 +36,4 @@ target :SwiftBuild_demo do
 
 end
 
-post_install do |installer|
-  installer.generated_projects.each do |project|
-    project.targets.each do |target|
-      target.build_configurations.each do |config|
-        config.build_settings['OTHER_SWIFT_FLAGS'] ||= '-Xfrontend -debug-time-function-bodies'
-      end
-    end
-  end
-end
 
