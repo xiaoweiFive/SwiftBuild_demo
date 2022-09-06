@@ -33,6 +33,8 @@ target :SwiftBuild_demo do
 #    pod 'MMSUIBaseFoundation',
     pod 'MMSBaseFoundation', '0.0.13'
 #    pod 'SVGAPlayer'
+    pod 'MMBaseFoundation', '0.1.0'
+
 
 end
 

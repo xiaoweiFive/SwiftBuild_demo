@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AE96E300BB9786835FB312C68605B147"
-               BuildableName = "MMSUIBaseFoundation.framework"
-               BlueprintName = "MMSUIBaseFoundation"
-               ReferencedContainer = "container:MMSUIBaseFoundation.xcodeproj">
+               BlueprintIdentifier = "2780D532B88346DFEB5E2A266908FF5E"
+               BuildableName = "MMBaseFoundation.framework"
+               BlueprintName = "MMBaseFoundation"
+               ReferencedContainer = "container:MMBaseFoundation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

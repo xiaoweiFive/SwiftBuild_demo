@@ -168,8 +168,8 @@
 		49AC5500000000 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 49AC5500000030 /* Build configuration list for PBXProject "MMFrameManager" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -377,7 +377,6 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/MMFrameManager/MMFrameManager.modulemap";
-				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
 				PRODUCT_MODULE_NAME = MMFrameManager;
 				PRODUCT_NAME = MMFrameManager;
 				SDKROOT = iphoneos;
@@ -414,7 +413,6 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/MMFrameManager/MMFrameManager.modulemap";
-				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
 				PRODUCT_MODULE_NAME = MMFrameManager;
 				PRODUCT_NAME = MMFrameManager;
 				SDKROOT = iphoneos;

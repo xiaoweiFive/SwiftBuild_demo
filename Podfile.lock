@@ -1,4 +1,38 @@
 PODS:
+  - MMBaseFoundation (0.1.0):
+    - MMBaseFoundation/Header (= 0.1.0)
+    - MMBaseFoundation/JSON (= 0.1.0)
+    - MMBaseFoundation/NSArray (= 0.1.0)
+    - MMBaseFoundation/NSData (= 0.1.0)
+    - MMBaseFoundation/NSDate (= 0.1.0)
+    - MMBaseFoundation/NSDictionary (= 0.1.0)
+    - MMBaseFoundation/NSFileManager (= 0.1.0)
+    - MMBaseFoundation/NSNull (= 0.1.0)
+    - MMBaseFoundation/NSObject (= 0.1.0)
+    - MMBaseFoundation/NSSet (= 0.1.0)
+    - MMBaseFoundation/NSString (= 0.1.0)
+  - MMBaseFoundation/Header (0.1.0)
+  - MMBaseFoundation/JSON (0.1.0):
+    - MMBaseFoundation/Header
+  - MMBaseFoundation/NSArray (0.1.0):
+    - MMBaseFoundation/Header
+  - MMBaseFoundation/NSData (0.1.0):
+    - MMBaseFoundation/Header
+  - MMBaseFoundation/NSDate (0.1.0):
+    - MMBaseFoundation/Header
+  - MMBaseFoundation/NSDictionary (0.1.0):
+    - MMBaseFoundation/Header
+  - MMBaseFoundation/NSFileManager (0.1.0):
+    - MMBaseFoundation/Header
+  - MMBaseFoundation/NSNull (0.1.0):
+    - MMBaseFoundation/Header
+  - MMBaseFoundation/NSObject (0.1.0):
+    - MMBaseFoundation/Header
+  - MMBaseFoundation/NSSet (0.1.0):
+    - MMBaseFoundation/Header
+  - MMBaseFoundation/NSString (0.1.0):
+    - MMBaseFoundation/Header
+    - MMBaseFoundation/NSDictionary
   - MMBaseUtility (0.1.4):
     - MMBaseUtility/DispatchSource (= 0.1.4)
     - MMBaseUtility/Header (= 0.1.4)
@@ -48,11 +82,13 @@ PODS:
     - MMFrameManager
 
 DEPENDENCIES:
+  - MMBaseFoundation (= 0.1.0)
   - MMSBaseFoundation (= 0.0.13)
   - MMSUIBaseFoundation (from `https://git.wemomo.com/ios/BaseFoundationLayer/MMSUIBaseFoundation.git`, branch `jenkins_test`)
 
 SPEC REPOS:
   https://git.wemomo.com/ios/Specs.git:
+    - MMBaseFoundation
     - MMBaseUtility
     - MMFrameManager
     - MMSBaseFoundation
@@ -68,11 +104,12 @@ CHECKOUT OPTIONS:
     :git: https://git.wemomo.com/ios/BaseFoundationLayer/MMSUIBaseFoundation.git
 
 SPEC CHECKSUMS:
+  MMBaseFoundation: e7f65b6adce7e7f259161f956ee8fe3f97161c03
   MMBaseUtility: dfdf6ae3b2930edba2404f24693627f984da99d9
   MMFrameManager: d854789f04e41ea217ec720d1bd53fb9b2208809
   MMSBaseFoundation: 6f9dd7bc60aa344e7aaeee5af3d05fea0edb6714
   MMSUIBaseFoundation: aa4b85977376268a65045b43cd5de241f29f4f4a
 
-PODFILE CHECKSUM: eb1231f8864dbea5a7b38d3c209a4b8894bf66f5
+PODFILE CHECKSUM: 6d49626c600aead5ac7148127da4c7b47fc6461a
 
 COCOAPODS: 1.11.2

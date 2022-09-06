@@ -7,36 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46EB2E000001B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E000001A0 /* Foundation.framework */; };
-		46EB2E00000220 /* Pods-SwiftBuild_demo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000210 /* Pods-SwiftBuild_demo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46EB2E00000260 /* Pods-SwiftBuild_demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000250 /* Pods-SwiftBuild_demo-dummy.m */; };
+		46EB2E000001C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E000001B0 /* Foundation.framework */; };
+		46EB2E00000230 /* Pods-SwiftBuild_demo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000220 /* Pods-SwiftBuild_demo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EB2E00000270 /* Pods-SwiftBuild_demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000260 /* Pods-SwiftBuild_demo-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		46EB2E00000270 /* PBXContainerItemProxy */ = {
+		46EB2E00000280 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 46EB2E000000C0 /* MMBaseUtility.xcodeproj */;
+			containerPortal = 46EB2E000000C0 /* MMBaseFoundation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2780D532B88346DFEB5E2A266908FF5E;
+			remoteInfo = MMBaseFoundation;
+		};
+		46EB2E000002A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46EB2E000000D0 /* MMBaseUtility.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 89F34579D66076DC440B10B3F3E906E7;
 			remoteInfo = MMBaseUtility;
 		};
-		46EB2E00000290 /* PBXContainerItemProxy */ = {
+		46EB2E000002C0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 46EB2E000000D0 /* MMFrameManager.xcodeproj */;
+			containerPortal = 46EB2E000000E0 /* MMFrameManager.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 567933AD8CFE820557B59D769F5DDC4F;
 			remoteInfo = MMFrameManager;
 		};
-		46EB2E000002B0 /* PBXContainerItemProxy */ = {
+		46EB2E000002E0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 46EB2E000000E0 /* MMSBaseFoundation.xcodeproj */;
+			containerPortal = 46EB2E000000F0 /* MMSBaseFoundation.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 33154841A1C05C0971E32F51D33C36FF;
 			remoteInfo = MMSBaseFoundation;
 		};
-		46EB2E000002D0 /* PBXContainerItemProxy */ = {
+		46EB2E00000300 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 46EB2E000000F0 /* MMSUIBaseFoundation.xcodeproj */;
+			containerPortal = 46EB2E00000100 /* MMSUIBaseFoundation.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = AE96E300BB9786835FB312C68605B147;
 			remoteInfo = MMSUIBaseFoundation;
@@ -45,28 +52,29 @@
 
 /* Begin PBXFileReference section */
 		46EB2E000000B0 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		46EB2E000000C0 /* MMBaseUtility */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MMBaseUtility; path = MMBaseUtility.xcodeproj; sourceTree = "<group>"; };
-		46EB2E000000D0 /* MMFrameManager */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MMFrameManager; path = MMFrameManager.xcodeproj; sourceTree = "<group>"; };
-		46EB2E000000E0 /* MMSBaseFoundation */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MMSBaseFoundation; path = MMSBaseFoundation.xcodeproj; sourceTree = "<group>"; };
-		46EB2E000000F0 /* MMSUIBaseFoundation */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MMSUIBaseFoundation; path = MMSUIBaseFoundation.xcodeproj; sourceTree = "<group>"; };
-		46EB2E000001A0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		46EB2E000001D0 /* Pods-SwiftBuild_demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftBuild_demo.release.xcconfig"; sourceTree = "<group>"; };
-		46EB2E000001E0 /* Pods-SwiftBuild_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftBuild_demo.debug.xcconfig"; sourceTree = "<group>"; };
-		46EB2E000001F0 /* Pods-SwiftBuild_demo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftBuild_demo-Info.plist"; sourceTree = "<group>"; };
-		46EB2E00000200 /* Pods-SwiftBuild_demo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftBuild_demo.modulemap"; sourceTree = "<group>"; };
-		46EB2E00000210 /* Pods-SwiftBuild_demo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftBuild_demo-umbrella.h"; sourceTree = "<group>"; };
-		46EB2E00000230 /* Pods-SwiftBuild_demo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftBuild_demo-acknowledgements.plist"; sourceTree = "<group>"; };
-		46EB2E00000240 /* Pods-SwiftBuild_demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftBuild_demo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		46EB2E00000250 /* Pods-SwiftBuild_demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftBuild_demo-dummy.m"; sourceTree = "<group>"; };
+		46EB2E000000C0 /* MMBaseFoundation */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MMBaseFoundation; path = MMBaseFoundation.xcodeproj; sourceTree = "<group>"; };
+		46EB2E000000D0 /* MMBaseUtility */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MMBaseUtility; path = MMBaseUtility.xcodeproj; sourceTree = "<group>"; };
+		46EB2E000000E0 /* MMFrameManager */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MMFrameManager; path = MMFrameManager.xcodeproj; sourceTree = "<group>"; };
+		46EB2E000000F0 /* MMSBaseFoundation */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MMSBaseFoundation; path = MMSBaseFoundation.xcodeproj; sourceTree = "<group>"; };
+		46EB2E00000100 /* MMSUIBaseFoundation */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MMSUIBaseFoundation; path = MMSUIBaseFoundation.xcodeproj; sourceTree = "<group>"; };
+		46EB2E000001B0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		46EB2E000001E0 /* Pods-SwiftBuild_demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftBuild_demo.release.xcconfig"; sourceTree = "<group>"; };
+		46EB2E000001F0 /* Pods-SwiftBuild_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftBuild_demo.debug.xcconfig"; sourceTree = "<group>"; };
+		46EB2E00000200 /* Pods-SwiftBuild_demo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftBuild_demo-Info.plist"; sourceTree = "<group>"; };
+		46EB2E00000210 /* Pods-SwiftBuild_demo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftBuild_demo.modulemap"; sourceTree = "<group>"; };
+		46EB2E00000220 /* Pods-SwiftBuild_demo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftBuild_demo-umbrella.h"; sourceTree = "<group>"; };
+		46EB2E00000240 /* Pods-SwiftBuild_demo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftBuild_demo-acknowledgements.plist"; sourceTree = "<group>"; };
+		46EB2E00000250 /* Pods-SwiftBuild_demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftBuild_demo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		46EB2E00000260 /* Pods-SwiftBuild_demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftBuild_demo-dummy.m"; sourceTree = "<group>"; };
 		F44E029D76DBD265613BCC2E2C7D133D /* Pods-SwiftBuild_demo */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SwiftBuild_demo"; path = Pods_SwiftBuild_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		46EB2E00000170 /* Frameworks */ = {
+		46EB2E00000180 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E000001B0 /* Foundation.framework in Frameworks */,
+				46EB2E000001C0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +103,7 @@
 		46EB2E00000060 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E00000190 /* iOS */,
+				46EB2E000001A0 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -103,7 +111,7 @@
 		46EB2E00000070 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E000001C0 /* Pods-SwiftBuild_demo */,
+				46EB2E000001D0 /* Pods-SwiftBuild_demo */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -111,33 +119,34 @@
 		46EB2E00000080 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E000000C0 /* MMBaseUtility */,
-				46EB2E000000D0 /* MMFrameManager */,
-				46EB2E000000E0 /* MMSBaseFoundation */,
-				46EB2E000000F0 /* MMSUIBaseFoundation */,
+				46EB2E000000C0 /* MMBaseFoundation */,
+				46EB2E000000D0 /* MMBaseUtility */,
+				46EB2E000000E0 /* MMFrameManager */,
+				46EB2E000000F0 /* MMSBaseFoundation */,
+				46EB2E00000100 /* MMSUIBaseFoundation */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		46EB2E00000190 /* iOS */ = {
+		46EB2E000001A0 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E000001A0 /* Foundation.framework */,
+				46EB2E000001B0 /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		46EB2E000001C0 /* Pods-SwiftBuild_demo */ = {
+		46EB2E000001D0 /* Pods-SwiftBuild_demo */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E00000200 /* Pods-SwiftBuild_demo.modulemap */,
-				46EB2E00000240 /* Pods-SwiftBuild_demo-acknowledgements.markdown */,
-				46EB2E00000230 /* Pods-SwiftBuild_demo-acknowledgements.plist */,
-				46EB2E00000250 /* Pods-SwiftBuild_demo-dummy.m */,
-				46EB2E000001F0 /* Pods-SwiftBuild_demo-Info.plist */,
-				46EB2E00000210 /* Pods-SwiftBuild_demo-umbrella.h */,
-				46EB2E000001E0 /* Pods-SwiftBuild_demo.debug.xcconfig */,
-				46EB2E000001D0 /* Pods-SwiftBuild_demo.release.xcconfig */,
+				46EB2E00000210 /* Pods-SwiftBuild_demo.modulemap */,
+				46EB2E00000250 /* Pods-SwiftBuild_demo-acknowledgements.markdown */,
+				46EB2E00000240 /* Pods-SwiftBuild_demo-acknowledgements.plist */,
+				46EB2E00000260 /* Pods-SwiftBuild_demo-dummy.m */,
+				46EB2E00000200 /* Pods-SwiftBuild_demo-Info.plist */,
+				46EB2E00000220 /* Pods-SwiftBuild_demo-umbrella.h */,
+				46EB2E000001F0 /* Pods-SwiftBuild_demo.debug.xcconfig */,
+				46EB2E000001E0 /* Pods-SwiftBuild_demo.release.xcconfig */,
 			);
 			name = "Pods-SwiftBuild_demo";
 			path = "Target Support Files/Pods-SwiftBuild_demo";
@@ -146,11 +155,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		46EB2E00000150 /* Headers */ = {
+		46EB2E00000160 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E00000220 /* Pods-SwiftBuild_demo-umbrella.h in Headers */,
+				46EB2E00000230 /* Pods-SwiftBuild_demo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,20 +168,21 @@
 /* Begin PBXNativeTarget section */
 		2498C9B4C3AA929690B3BBFA57210D69 /* Pods-SwiftBuild_demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 46EB2E00000110 /* Build configuration list for PBXNativeTarget "Pods-SwiftBuild_demo" */;
+			buildConfigurationList = 46EB2E00000120 /* Build configuration list for PBXNativeTarget "Pods-SwiftBuild_demo" */;
 			buildPhases = (
-				46EB2E00000150 /* Headers */,
-				46EB2E00000160 /* Sources */,
-				46EB2E00000170 /* Frameworks */,
-				46EB2E00000180 /* Resources */,
+				46EB2E00000160 /* Headers */,
+				46EB2E00000170 /* Sources */,
+				46EB2E00000180 /* Frameworks */,
+				46EB2E00000190 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				46EB2E00000280 /* PBXTargetDependency */,
-				46EB2E000002A0 /* PBXTargetDependency */,
-				46EB2E000002C0 /* PBXTargetDependency */,
-				46EB2E000002E0 /* PBXTargetDependency */,
+				46EB2E00000290 /* PBXTargetDependency */,
+				46EB2E000002B0 /* PBXTargetDependency */,
+				46EB2E000002D0 /* PBXTargetDependency */,
+				46EB2E000002F0 /* PBXTargetDependency */,
+				46EB2E00000310 /* PBXTargetDependency */,
 			);
 			name = "Pods-SwiftBuild_demo";
 			productName = Pods_SwiftBuild_demo;
@@ -185,8 +195,8 @@
 		46EB2E00000000 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 46EB2E00000030 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -201,16 +211,19 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProjectRef = 46EB2E000000C0 /* MMBaseUtility */;
+					ProjectRef = 46EB2E000000C0 /* MMBaseFoundation */;
 				},
 				{
-					ProjectRef = 46EB2E000000D0 /* MMFrameManager */;
+					ProjectRef = 46EB2E000000D0 /* MMBaseUtility */;
 				},
 				{
-					ProjectRef = 46EB2E000000E0 /* MMSBaseFoundation */;
+					ProjectRef = 46EB2E000000E0 /* MMFrameManager */;
 				},
 				{
-					ProjectRef = 46EB2E000000F0 /* MMSUIBaseFoundation */;
+					ProjectRef = 46EB2E000000F0 /* MMSBaseFoundation */;
+				},
+				{
+					ProjectRef = 46EB2E00000100 /* MMSUIBaseFoundation */;
 				},
 			);
 			projectRoot = "";
@@ -221,7 +234,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		46EB2E00000180 /* Resources */ = {
+		46EB2E00000190 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -231,36 +244,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		46EB2E00000160 /* Sources */ = {
+		46EB2E00000170 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E00000260 /* Pods-SwiftBuild_demo-dummy.m in Sources */,
+				46EB2E00000270 /* Pods-SwiftBuild_demo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		46EB2E00000280 /* PBXTargetDependency */ = {
+		46EB2E00000290 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MMBaseFoundation;
+			targetProxy = 46EB2E00000280 /* PBXContainerItemProxy */;
+		};
+		46EB2E000002B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MMBaseUtility;
-			targetProxy = 46EB2E00000270 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E000002A0 /* PBXContainerItemProxy */;
 		};
-		46EB2E000002A0 /* PBXTargetDependency */ = {
+		46EB2E000002D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MMFrameManager;
-			targetProxy = 46EB2E00000290 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E000002C0 /* PBXContainerItemProxy */;
 		};
-		46EB2E000002C0 /* PBXTargetDependency */ = {
+		46EB2E000002F0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MMSBaseFoundation;
-			targetProxy = 46EB2E000002B0 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E000002E0 /* PBXContainerItemProxy */;
 		};
-		46EB2E000002E0 /* PBXTargetDependency */ = {
+		46EB2E00000310 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MMSUIBaseFoundation;
-			targetProxy = 46EB2E000002D0 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E00000300 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -393,9 +411,9 @@
 			};
 			name = Release;
 		};
-		46EB2E00000120 /* Release */ = {
+		46EB2E00000130 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E000001D0 /* Pods-SwiftBuild_demo.release.xcconfig */;
+			baseConfigurationReference = 46EB2E000001E0 /* Pods-SwiftBuild_demo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -419,7 +437,6 @@
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftBuild_demo/Pods-SwiftBuild_demo.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -432,9 +449,9 @@
 			};
 			name = Release;
 		};
-		46EB2E00000130 /* Debug */ = {
+		46EB2E00000140 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E000001E0 /* Pods-SwiftBuild_demo.debug.xcconfig */;
+			baseConfigurationReference = 46EB2E000001F0 /* Pods-SwiftBuild_demo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -458,7 +475,6 @@
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftBuild_demo/Pods-SwiftBuild_demo.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -482,11 +498,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46EB2E00000110 /* Build configuration list for PBXNativeTarget "Pods-SwiftBuild_demo" */ = {
+		46EB2E00000120 /* Build configuration list for PBXNativeTarget "Pods-SwiftBuild_demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				46EB2E00000130 /* Debug */,
-				46EB2E00000120 /* Release */,
+				46EB2E00000140 /* Debug */,
+				46EB2E00000130 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
