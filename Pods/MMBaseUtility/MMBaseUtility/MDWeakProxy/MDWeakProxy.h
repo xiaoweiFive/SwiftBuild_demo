@@ -15,4 +15,5 @@
 + (instancetype)weakProxyForObject:(id)targetObject;
 
 - (id)assignWeakToStrong;
+
 @end

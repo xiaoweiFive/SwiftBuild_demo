@@ -41,12 +41,22 @@
 
 - (NSString *)platform
 {
-    return [self getSysInfoByName:"hw.machine"];
+    static NSString *platform;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        platform = [self getSysInfoByName:"hw.machine"];
+    });
+    return platform;
 }
 
 - (NSString *)hwmodel
 {
-    return [self getSysInfoByName:"hw.model"];
+    static NSString *hwmodel;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        hwmodel = [self getSysInfoByName:"hw.model"];
+    });
+    return hwmodel;
 }
 
 #pragma mark sysctl utils
@@ -61,40 +71,77 @@
 
 - (NSUInteger)cpuFrequency
 {
-    return [self getSysInfo:HW_CPU_FREQ];
+    static NSUInteger cpuFrequence;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        cpuFrequence = [self getSysInfo:HW_CPU_FREQ];
+    });
+    
+    return cpuFrequence;
 }
 
 - (NSUInteger)busFrequency
 {
-    return [self getSysInfo:HW_BUS_FREQ];
+    static NSUInteger busFrequency;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        busFrequency = [self getSysInfo:HW_BUS_FREQ];
+    });
+    
+    return busFrequency;
 }
 
 - (NSUInteger)totalMemory
 {
-    return [self getSysInfo:HW_PHYSMEM];
+    static NSUInteger totalMemory;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        totalMemory = [self getSysInfo:HW_PHYSMEM];
+    });
+    return totalMemory;
 }
 
 - (NSUInteger)userMemory
 {
-    return [self getSysInfo:HW_USERMEM];
+    static NSUInteger userMemory;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        userMemory = [self getSysInfo:HW_USERMEM];
+    });
+    return userMemory;
 }
 
 - (NSUInteger)maxSocketBufferSize
 {
-    return [self getSysInfo:KIPC_MAXSOCKBUF];
+    static NSUInteger maxSocketBufferSize;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        maxSocketBufferSize = [self getSysInfo:KIPC_MAXSOCKBUF];
+    });
+    return maxSocketBufferSize;
 }
 
 #pragma mark file system -- Thanks Joachim Bean!
 - (NSNumber *)totalDiskSpace
 {
-    NSDictionary *fattributes = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:nil];
-    return [fattributes objectForKey:NSFileSystemSize];
+    static NSNumber *totalDiskSpace;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSDictionary *fattributes = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:nil];
+        totalDiskSpace = [fattributes objectForKey:NSFileSystemSize];
+    });
+    return totalDiskSpace;
 }
 
 - (NSNumber *)freeDiskSpace
 {
-    NSDictionary *fattributes = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:nil];
-    return [fattributes objectForKey:NSFileSystemFreeSize];
+    static NSNumber *freeDiskSpace;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSDictionary *fattributes = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:nil];
+        freeDiskSpace = [fattributes objectForKey:NSFileSystemFreeSize];
+    });
+    return freeDiskSpace;
 }
 
 #pragma mark - platform type and name utils
@@ -143,6 +190,11 @@
                                      @"iPhone14,3":@(UIDevice13ProMaxiPhone),
                                      @"iPhone14,4":@(UIDevice13miniiPhone),
                                      @"iPhone14,5":@(UIDevice13iPhone),
+                                     @"iPhone14,6":@(UIDeviceSE3rdGen),// iPhone SE 3rd Gen
+                                     @"iPhone14,7":@(UIDevice14iPhone),// iPhone 14
+                                     @"iPhone14,8":@(UIDevice14PlusiPhone),// iPhone 14 Plus
+                                     @"iPhone15,2":@(UIDevice14ProIPhone),// iPhone 14 Pro
+                                     @"iPhone15,3":@(UIDevice14ProMaxiPhone)// iPhone 14 Pro Max
                   };
     return iphoneInforDic;
 }
@@ -166,6 +218,9 @@
                                    @"iPad2,2":@(UIDevice2GiPad),
                                    @"iPad2,3":@(UIDevice2GiPad),
                                    @"iPad2,4":@(UIDevice2GiPad),
+                                   @"iPad2,5":@(UIDeviceiPadmini),
+                                   @"iPad2,6":@(UIDeviceiPadmini),
+                                   @"iPad2,7":@(UIDeviceiPadmini),
                                    @"iPad3,1":@(UIDevice3GiPad),
                                    @"iPad3,2":@(UIDevice3GiPad),
                                    @"iPad3,3":@(UIDevice3GiPad),
@@ -175,6 +230,14 @@
                                    @"iPad4,1":@(UIDeviceAiriPad),
                                    @"iPad4,2":@(UIDeviceAiriPad),
                                    @"iPad4,3":@(UIDeviceAiriPad),
+                                   @"iPad4,4":@(UIDeviceiPadminiRetina),
+                                   @"iPad4,5":@(UIDeviceiPadminiRetina),
+                                   @"iPad4,6":@(UIDeviceiPadminiRetina),
+                                   @"iPad4,7":@(UIDeviceiPadmini3),
+                                   @"iPad4,8":@(UIDeviceiPadmini3),
+                                   @"iPad4,9":@(UIDeviceiPadmini3),
+                                   @"iPad5,1":@(UIDeviceiPadmini4),
+                                   @"iPad5,2":@(UIDeviceiPadmini4),
                                    @"iPad5,3":@(UIDeviceAir2iPad),
                                    @"iPad5,4":@(UIDeviceAir2iPad),
                                    @"iPad6,3":@(UIDevicePro9p7InchiPad),
@@ -189,6 +252,8 @@
                                    @"iPad7,2":@(UIDevicePro12p9Inch2GiPad),
                                    @"iPad7,5":@(UIDevice6GiPad),
                                    @"iPad7,6":@(UIDevice6GiPad),
+                                   @"iPad7,11":@(UIDevice7GiPad),
+                                   @"iPad7,12":@(UIDevice7GiPad),
                                    @"iPad8,1":@(UIDevicePro11InchiPad),
                                    @"iPad8,2":@(UIDevicePro11InchiPad),
                                    @"iPad8,3":@(UIDevicePro11InchiPad),
@@ -197,14 +262,14 @@
                                    @"iPad8,6":@(UIDevicePro12p9Inch3GiPad),
                                    @"iPad8,7":@(UIDevicePro12p9Inch3GiPad),
                                    @"iPad8,8":@(UIDevicePro12p9Inch3GiPad),
-                                   @"iPad11,3":@(UIDeviceAir3GiPad),
-                                   @"iPad11,4":@(UIDeviceAir3GiPad),
-                                   @"iPad7,11":@(UIDevice7GiPad),
-                                   @"iPad7,12":@(UIDevice7GiPad),
                                    @"iPad8,9":@(UIDevicePro11Inch2GiPad),
                                    @"iPad8,10":@(UIDevicePro11Inch2GiPad),
                                    @"iPad8,11":@(UIDevicePro12p9Inch4GiPad),
                                    @"iPad8,12":@(UIDevicePro12p9Inch4GiPad),
+                                   @"iPad11,1":@(UIDeviceiPadmini5G),
+                                   @"iPad11,2":@(UIDeviceiPadmini5G),
+                                   @"iPad11,3":@(UIDeviceAir3GiPad),
+                                   @"iPad11,4":@(UIDeviceAir3GiPad),
                                    @"iPad11,6":@(UIDevice8GiPad),
                                    @"iPad11,7":@(UIDevice8GiPad),
                                    @"iPad12,1":@(UIDevice10p2Inch9thPad),
@@ -219,21 +284,10 @@
                                    @"iPad13,9":@(UIDevicePro12p9Inch5thPad),
                                    @"iPad13,10":@(UIDevicePro12p9Inch5thPad),
                                    @"iPad13,11":@(UIDevicePro12p9Inch5thPad),
+                                   @"iPad13,16":@(UIDeviceAir5thGenWiFi),
+                                   @"iPad13,17":@(UIDeviceAir5thGenWIFICellular),
                                    @"iPad14,1":@(UIDeviceiPadmini6th),
                                    @"iPad14,2":@(UIDeviceiPadmini6th),
-                                   @"iPad2,5":@(UIDeviceiPadmini),
-                                   @"iPad2,6":@(UIDeviceiPadmini),
-                                   @"iPad2,7":@(UIDeviceiPadmini),
-                                   @"iPad4,4":@(UIDeviceiPadminiRetina),
-                                   @"iPad4,5":@(UIDeviceiPadminiRetina),
-                                   @"iPad4,6":@(UIDeviceiPadminiRetina),
-                                   @"iPad4,7":@(UIDeviceiPadmini3),
-                                   @"iPad4,8":@(UIDeviceiPadmini3),
-                                   @"iPad4,9":@(UIDeviceiPadmini3),
-                                   @"iPad5,1":@(UIDeviceiPadmini4),
-                                   @"iPad5,2":@(UIDeviceiPadmini4),
-                                   @"iPad11,1":@(UIDeviceiPadmini5G),
-                                   @"iPad11,2":@(UIDeviceiPadmini5G),
                   };
     return ipadInforDic;
 }
@@ -259,10 +313,13 @@
         NSDictionary *inforDic = nil;
         if ([platform hasPrefix:@"iPhone"]) {
             inforDic = [self platFormIphoneInforDic];
+            devicePlatform = UIDeviceUnknowniPhone;
         } else if ([platform hasPrefix:@"iPod"]) {
             inforDic = [self platFormiPodInforDic];
+            devicePlatform = UIDeviceUnknowniPod;
         } else if ([platform hasPrefix:@"iPad"]) {
             inforDic = [self platFormiPadInforDic];
+            devicePlatform = UIDeviceUnknowniPad;
         } else if ([platform hasPrefix:@"AppleTV"]) {
             inforDic = [self platFormAppleTVInforDic];
         }
@@ -270,11 +327,8 @@
         if (type) {
             devicePlatform = type.integerValue;
         } else {
-            if ([platform hasPrefix:@"iPhone"])             devicePlatform = UIDeviceUnknowniPhone;
-            if ([platform hasPrefix:@"iPod"])               devicePlatform = UIDeviceUnknowniPod;
-            if ([platform hasPrefix:@"iPad"])               devicePlatform = UIDeviceUnknowniPad;
             // Simulator thanks Jordan Breeding
-            if ([platform hasSuffix:@"86"] || [platform isEqual:@"x86_64"]) {
+            if ([platform hasSuffix:@"86"] || [platform isEqual:@"x86_64"] || [platform isEqual:@"arm64"]) {
                 BOOL smallerScreen = MIN([UIScreen mainScreen].bounds.size.width,
                                          [UIScreen mainScreen].bounds.size.height) < 768;
                 devicePlatform = smallerScreen ? UIDeviceiPhoneSimulatoriPhone : UIDeviceiPhoneSimulatoriPad;
@@ -289,99 +343,11 @@
     static NSString *platStr = nil;
     static dispatch_once_t onceT;
     dispatch_once(&onceT, ^{
-        switch ([self platformType]) {
-            case UIDevice1GiPhone: platStr = IPHONE_1G_NAMESTRING; break;
-            case UIDevice3GiPhone: platStr = IPHONE_3G_NAMESTRING; break;
-            case UIDevice3GSiPhone: platStr = IPHONE_3GS_NAMESTRING; break;
-            case UIDevice4iPhone: platStr = IPHONE_4_NAMESTRING; break;
-            case UIDevice4SiPhone: platStr = IPHONE_4S_NAMESTRING; break;
-            case UIDevice5iPhone: platStr = IPHONE_5_NAMESTRING; break;
-            case UIDevice5CiPhone: platStr = IPHONE_5C_NAMESTRING; break;
-            case UIDevice5SiPhone: platStr = IPHONE_5S_NAMESTRING; break;
-            case UIDevice6iPhone: platStr = IPHONE_6_NAMESTRING; break;
-            case UIDevice6PlusiPhone: platStr = IPHONE_6PLUS_NAMESTRING; break;
-            case UIDevice6SiPhone: platStr = IPHONE_6S_NAMESTRING; break;
-            case UIDevice6SPlusiPhone: platStr = IPHONE_6SPLUS_NAMESTRING; break;
-            case UIDeviceSEiPhone: platStr = IPHONE_SE_NAMESTRING; break;
-            case UIDevice7iPhone: platStr = IPHONE_7_NAMESTRING; break;
-            case UIDevice7PlusiPhone: platStr = IPHONE_7PLUS_NAMESTRING; break;
-            case UIDevice8iPhone: platStr = IPHONE_8_NAMESTRING; break;
-            case UIDevice8PlusiPhone: platStr = IPHONE_8PLUS_NAMESTRING; break;
-            case UIDeviceXiPhone: platStr = IPHONE_X_NAMESTRING; break;
-            case UIDeviceXSiPhone: platStr = IPHONE_XS_NAMESTRING; break;
-            case UIDeviceXSMaxiPhone: platStr = IPHONE_XSMAX_NAMESTRING; break;
-            case UIDeviceXRiPhone: platStr = IPHONE_XR_NAMESTRING; break;
-            case UIDevice11iPhone: platStr = IPHONE_11_NAMESTRING; break;
-            case UIDevice11ProiPhone: platStr = IPHONE_11PRO_NAMESTRING; break;
-            case UIDevice11ProMaxiPhone: platStr = IPHONE_11PROMAX_NAMESTRING; break;
-            case UIDeviceSE2GiPhone: platStr = IPHONE_SE2G_NAMESTRING; break;
-            case UIDevice12miniiPhone: platStr = IPHONE_12MINI_NAMESTRING; break;
-            case UIDevice12iPhone: platStr = IPHONE_12_NAMESTRING; break;
-            case UIDevice12ProiPhone: platStr = IPHONE_12PRO_NAMESTRING; break;
-            case UIDevice12ProMaxiPhone: platStr = IPHONE_12PROMAX_NAMESTRING; break;
-            // iPhone 13
-            case UIDevice13miniiPhone: platStr = IPHONE_13MINI_NAMESTRING; break;
-            case UIDevice13iPhone: platStr = IPHONE_13_NAMESTRING; break;
-            case UIDevice13ProiPhone: platStr = IPHONE_13PRO_NAMESTRING; break;
-            case UIDevice13ProMaxiPhone: platStr = IPHONE_13PROMAX_NAMESTRING; break;
-            
-            case UIDeviceUnknowniPhone: platStr = IPHONE_UNKNOWN_NAMESTRING; break;
-                
-            case UIDevice1GiPod: platStr = IPOD_1G_NAMESTRING; break;
-            case UIDevice2GiPod: platStr = IPOD_2G_NAMESTRING; break;
-            case UIDevice3GiPod: platStr = IPOD_3G_NAMESTRING; break;
-            case UIDevice4GiPod: platStr = IPOD_4G_NAMESTRING; break;
-            case UIDevice5GiPod: platStr = IPOD_5G_NAMESTRING; break;
-            case UIDevice6GiPod: platStr = IPOD_6G_NAMESTRING; break;
-            case UIDevice7GiPod: platStr = IPOD_7G_NAMESTRING; break;
-            case UIDeviceUnknowniPod: platStr = IPOD_UNKNOWN_NAMESTRING; break;
-                
-            case UIDevice1GiPad: platStr = IPAD_1G_NAMESTRING; break;
-            case UIDevice2GiPad: platStr = IPAD_2G_NAMESTRING; break;
-            case UIDevice3GiPad: platStr = IPAD_3G_NAMESTRING; break;
-            case UIDevice4GiPad: platStr = IPAD_4G_NAMESTRING; break;
-            case UIDeviceAiriPad: platStr = IPAD_AIR_NAMESTRING; break;
-            case UIDeviceAir2iPad: platStr = IPAD_AIR2_NAMESTRING; break;
-            case UIDevicePro9p7InchiPad: platStr = IPAD_PRO9P7INCH_NAMESTRING; break;
-            case UIDevicePro12p9InchiPad: platStr = IPAD_PRO12P9INCH_NAMESTRING; break;
-            case UIDevice5GiPad: platStr = IPAD_5G_NAMESTRING; break;
-            case UIDevicePro10p5InchiPad: platStr = IPAD_PRO10P5INCH_NAMESTRING; break;
-            case UIDevicePro12p9Inch2GiPad: platStr = IPAD_PRO12P9INCH2G_NAMESTRING; break;
-            case UIDevice6GiPad: platStr = IPAD_6G_NAMESTRING; break;
-            case UIDevicePro11InchiPad: platStr = IPAD_PRO11INCH_NAMESTRING; break;
-            case UIDevicePro12p9Inch3GiPad: platStr = IPAD_PRO12P9INCH3G_NAMESTRING; break;
-            case UIDeviceAir3GiPad: platStr = IPAD_AIR3G_NAMESTRING; break;
-            case UIDevice7GiPad: platStr = IPAD_7G_NAMESTRING; break;
-            case UIDevicePro11Inch2GiPad: platStr = IPAD_PRO11INCH2G_NAMESTRING; break;
-            case UIDevicePro12p9Inch4GiPad: platStr = IPAD_PRO12P9INCH4G_NAMESTRING; break;
-            case UIDevice8GiPad: platStr = IPAD_8G_NAMESTRING; break;
-            case UIDeviceAir4GiPad: platStr = IPAD_AIR4G_NAMESTRING; break;
-                
-            case UIDeviceiPadmini: platStr = IPAD_MINI_NAMESTRING; break;
-            case UIDeviceiPadminiRetina: platStr = IPAD_MINI_RETINA_NAMESTRING; break;
-            case UIDeviceiPadmini3: platStr = IPAD_MINI3_NAMESTRING; break;
-            case UIDeviceiPadmini4: platStr = IPAD_MINI4_NAMESTRING; break;
-            case UIDeviceiPadmini5G: platStr = IPAD_MINI5G_NAMESTRING; break;
-            case UIDeviceUnknowniPad: platStr = IPAD_UNKNOWN_NAMESTRING; break;
-            
-            case UIDevicePro12p9Inch5thPad: platStr = IPAD_PRO12P9INCH5TH_NAMESTRING; break;
-            case UIDevicePro11Inch3rdPad: platStr = IPAD_PRO11INCH3RD_NAMESTRING; break;
-            case UIDevice10p2Inch9thPad: platStr = IPAD_10P2INCH9TH_NAMESTRING; break;
-            case UIDeviceiPadmini6th: platStr = IPAD_MINI6_NAMESTRING; break;
-                
-            case UIDeviceAppleTV2: platStr = APPLETV_2G_NAMESTRING; break;
-            case UIDeviceAppleTV3: platStr = APPLETV_3G_NAMESTRING; break;
-            case UIDeviceAppleTV4: platStr = APPLETV_4G_NAMESTRING; break;
-            case UIDeviceAppleTV4K: platStr = APPLETV_4K_NAMESTRING; break;
-            case UIDeviceUnknownAppleTV: platStr = APPLETV_UNKNOWN_NAMESTRING; break;
-                
-            case UIDeviceiPhoneSimulator: platStr = IPHONE_SIMULATOR_NAMESTRING; break;
-            case UIDeviceiPhoneSimulatoriPhone: platStr = IPHONE_SIMULATOR_IPHONE_NAMESTRING; break;
-            case UIDeviceiPhoneSimulatoriPad: platStr = IPHONE_SIMULATOR_IPAD_NAMESTRING; break;
-                
-            case UIDeviceIFPGA: platStr = IFPGA_NAMESTRING; break;
-                
-            default: platStr = IOS_FAMILY_UNKNOWN_DEVICE; break;
+        NSString *platform = [self platform];
+        NSDictionary *map = [self deviceMap];
+        platStr = map[platform];
+        if (!platStr) {
+            platStr = platform;
         }
     });
     return platStr;
@@ -478,5 +444,153 @@
     });
     return x;
 }
+
+#warning - 设备名只能新增不能移除或修改，否则可能造成对应设备出现账号被踢问题
+#warning - 设备名只能新增不能移除或修改，否则可能造成对应设备出现账号被踢问题
+#warning - 设备名只能新增不能移除或修改，否则可能造成对应设备出现账号被踢问题
+
+- (NSDictionary *)deviceMap {
+    NSDictionary *dic = @{
+        @"i386" : @"iPhone Simulator",
+        @"x86_64" : @"iPhone Simulator",
+        @"arm64" : @"iPhone Simulator",
+//        @"iPhone1,1" : @"iPhone 1G",
+//        @"iPhone1,2" : @"iPhone 3G",
+//        @"iPhone2,1" : @"iPhone 3GS",
+//        @"iPhone3,1" : @"iPhone 4",
+//        @"iPhone3,2" : @"iPhone 4",
+//        @"iPhone3,3" : @"iPhone 4",
+//        @"iPhone4,1" : @"iPhone 4S",
+//        @"iPhone5,1" : @"iPhone 5",
+//        @"iPhone5,2" : @"iPhone 5",
+//        @"iPhone5,3" : @"iPhone 5C",
+//        @"iPhone5,4" : @"iPhone 5C",      // 设备不再支持iOS 12
+        @"iPhone6,1" : @"iPhone 5S",
+        @"iPhone6,2" : @"iPhone 5S",
+        @"iPhone7,1" : @"iPhone 6 Plus",
+        @"iPhone7,2" : @"iPhone 6",
+        @"iPhone8,1" : @"iPhone 6S",
+        @"iPhone8,2" : @"iPhone 6S Plus",
+        @"iPhone8,4" : @"iPhone SE",
+        @"iPhone9,1" : @"iPhone 7",
+        @"iPhone9,2" : @"iPhone 7 Plus",
+        @"iPhone9,3" : @"iPhone 7",
+        @"iPhone9,4" : @"iPhone 7 Plus",
+        @"iPhone10,1" : @"iPhone 8",
+        @"iPhone10,2" : @"iPhone 8 Plus",
+        @"iPhone10,3" : @"iPhone X",
+        @"iPhone10,4" : @"iPhone 8",
+        @"iPhone10,5" : @"iPhone 8 Plus",
+        @"iPhone10,6" : @"iPhone X",
+        @"iPhone11,2" : @"iPhone XS",
+        @"iPhone11,4" : @"iPhone XS Max",
+        @"iPhone11,6" : @"iPhone XS Max",
+        @"iPhone11,8" : @"iPhone XR",
+        @"iPhone12,1" : @"iPhone 11",
+        @"iPhone12,3" : @"iPhone 11 Pro",
+        @"iPhone12,5" : @"iPhone 11 Pro Max",
+        @"iPhone12,8" : @"iPhone SE 2G",
+        @"iPhone13,1" : @"iPhone 12 Mini",
+        @"iPhone13,2" : @"iPhone 12",
+        @"iPhone13,3" : @"iPhone 12 Pro",
+        @"iPhone13,4" : @"iPhone 12 Pro Max",
+        @"iPhone14,2" : @"iPhone 13 Pro",
+        @"iPhone14,3" : @"iPhone 13 Pro Max",
+        @"iPhone14,4" : @"iPhone 13 Mini",
+        @"iPhone14,5" : @"iPhone 13",
+        @"iPhone14,6" : @"iPhone SE 3G",
+        @"iPhone14,7" : @"iPhone 14",
+        @"iPhone14,8" : @"iPhone 14 Plus",
+        @"iPhone15,2" : @"iPhone 14 Pro",
+        @"iPhone15,3" : @"iPhone 14 Pro Max",
+        
+//        @"iPod1,1" : @"iPod touch 1Gen",
+//        @"iPod2,1" : @"iPod touch 2Gen",
+//        @"iPod3,1" : @"iPod touch 3Gen",
+//        @"iPod4,1" : @"iPod touch 4Gen",
+//        @"iPod5,1" : @"iPod touch 5Gen",      // 不再支持iOS 12
+        @"iPod7,1" : @"iPod touch 6Gen",
+        @"iPod9,1" : @"iPod touch 7Gen",
+        
+//        @"iPad1,1" : @"iPad 1G",
+//        @"iPad1,2" : @"iPad 3G",
+        @"iPad2,1" : @"iPad 2G",
+        @"iPad2,2" : @"iPad 2G",
+        @"iPad2,3" : @"iPad 2G",
+        @"iPad2,4" : @"iPad 2G",
+        @"iPad2,5" : @"iPad mini",
+        @"iPad2,6" : @"iPad mini",
+        @"iPad2,7" : @"iPad mini",
+        @"iPad3,1" : @"iPad 3G",
+        @"iPad3,2" : @"iPad 3G",
+        @"iPad3,3" : @"iPad 3G",
+        @"iPad3,4" : @"iPad 4G",
+        @"iPad3,5" : @"iPad 4G",
+        @"iPad3,6" : @"iPad 4G",
+        @"iPad4,1" : @"iPad Air",
+        @"iPad4,2" : @"iPad Air",
+        @"iPad4,3" : @"iPad Air",
+        @"iPad4,4" : @"iPad mini Retina",
+        @"iPad4,5" : @"iPad mini Retina",
+        @"iPad4,6" : @"iPad mini Retina",
+        @"iPad4,7" : @"iPad mini 3",
+        @"iPad4,8" : @"iPad mini 3",
+        @"iPad4,9" : @"iPad mini 3",
+        @"iPad5,1" : @"iPad mini 4",
+        @"iPad5,2" : @"iPad mini 4",
+        @"iPad5,3" : @"iPad Air 2",
+        @"iPad5,4" : @"iPad Air 2",
+        @"iPad6,3" : @"iPad Pro 9.7-inch",
+        @"iPad6,4" : @"iPad Pro 9.7-inch",
+        @"iPad6,7" : @"iPad Pro 12.9-inch",
+        @"iPad6,8" : @"iPad Pro 12.9-inch",
+        @"iPad6,11" : @"iPad 5G",
+        @"iPad6,12" : @"iPad 5G",
+        @"iPad7,1" : @"iPad Pro 12.9-inch 2G",
+        @"iPad7,2" : @"iPad Pro 12.9-inch 2G",
+        @"iPad7,3" : @"iPad Pro 10.5-inch",
+        @"iPad7,4" : @"iPad Pro 10.5-inch",
+        @"iPad7,5" : @"iPad 6G",
+        @"iPad7,6" : @"iPad 6G",
+        @"iPad7,11" : @"iPad 7G",
+        @"iPad7,12" : @"iPad 7G",
+        @"iPad8,1" : @"iPad Pro 11-inch",
+        @"iPad8,2" : @"iPad Pro 11-inch",
+        @"iPad8,3" : @"iPad Pro 11-inch",
+        @"iPad8,4" : @"iPad Pro 11-inch",
+        @"iPad8,5" : @"iPad Pro 12.9-inch 3G",
+        @"iPad8,6" : @"iPad Pro 12.9-inch 3G",
+        @"iPad8,7" : @"iPad Pro 12.9-inch 3G",
+        @"iPad8,8" : @"iPad Pro 12.9-inch 3G",
+        @"iPad8,9" : @"iPad Pro 11-inch 2G",
+        @"iPad8,10" : @"iPad Pro 11-inch 2G",
+        @"iPad8,11" : @"iPad Pro 12.9-inch 4G",
+        @"iPad8,12" : @"iPad Pro 12.9-inch 4G",
+        @"iPad11,1" : @"iPad mini 5G",
+        @"iPad11,2" : @"iPad mini 5G",
+        @"iPad11,3" : @"iPad Air 3G",
+        @"iPad11,4" : @"iPad Air 3G",
+        @"iPad11,6" : @"iPad 8G",
+        @"iPad11,7" : @"iPad 8G",
+        @"iPad12,1" : @"iPad Pro 10.2-inch 9th",
+        @"iPad12,2" : @"iPad Pro 10.2-inch 9th",
+        @"iPad13,1" : @"iPad Air 4G",
+        @"iPad13,2" : @"iPad Air 4G",
+        @"iPad13,4" : @"iPad Pro 11-inch 3rd",  // 5th
+        @"iPad13,5" : @"iPad Pro 11-inch 3rd",  // 5th
+        @"iPad13,6" : @"iPad Pro 11-inch 3rd",  // 5th
+        @"iPad13,7" : @"iPad Pro 11-inch 3rd",  // 5th
+        @"iPad13,8" : @"iPad Pro 12.9-inch 5th",
+        @"iPad13,9" : @"iPad Pro 12.9-inch 5th",
+        @"iPad13,10" : @"iPad Pro 12.9-inch 5th",
+        @"iPad13,11" : @"iPad Pro 12.9-inch 5th",
+        @"iPad13,16" : @"iPad Air 5G",
+        @"iPad13,17" : @"iPad Air 5Gen",
+        @"iPad14,1" : @"iPad mini 6",
+        @"iPad14,2" : @"iPad mini 6",
+    };
+    return dic;
+}
+
 
 @end

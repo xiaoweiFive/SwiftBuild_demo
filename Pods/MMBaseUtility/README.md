@@ -1,5 +1,15 @@
 # 常用工具类
 
+
+
+## 待处理
+
+1. 未使用的类清理
+2. 细化为timer、safe容器、timer、WeakProxy、KeyChain、PHPhotoLibrary分类等库
+3. 剔除MMUtility、相关方法分别迁移至NSNotification和UIApplication分类
+
+
+
 #### MDLinkedMap
 
 1. MDLinkedMap ，链表和字典的结合，可以理解为带顺序的字典

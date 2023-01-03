@@ -24,9 +24,6 @@
     return result;
 }
 
-
-
-
 + (void)postNotificationToMainThreadName:(NSString *)name
 {
     [self postNotificationToMainThreadName:name object:nil userInfo:nil];
@@ -48,16 +45,16 @@
     }
 }
 
-
-
 + (void)handleApplicationOpenUrl:(NSURL *)url
 {
     [self handleApplicationOpenUrl:url completionHandler:NULL];
 }
+
 + (void)handleApplicationOpenUrl:(NSURL *)url completionHandler:(void (^ __nullable)(BOOL success))completion
 {
     [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:completion];
 }
+
 + (void)handleApplicationOpenUrlString:(NSString *)appURL
 {
     return [self handleApplicationOpenUrl:[NSURL URLWithString:appURL]];

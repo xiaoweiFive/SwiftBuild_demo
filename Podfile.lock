@@ -33,56 +33,56 @@ PODS:
   - MMBaseFoundation/NSString (0.1.0):
     - MMBaseFoundation/Header
     - MMBaseFoundation/NSDictionary
-  - MMBaseUtility (0.1.4):
-    - MMBaseUtility/DispatchSource (= 0.1.4)
-    - MMBaseUtility/Header (= 0.1.4)
-    - MMBaseUtility/KeyChain (= 0.1.4)
-    - MMBaseUtility/MDLinkedMap (= 0.1.4)
-    - MMBaseUtility/MDQueue (= 0.1.4)
-    - MMBaseUtility/MDStack (= 0.1.4)
-    - MMBaseUtility/MDWeakProxy (= 0.1.4)
-    - MMBaseUtility/MFInetAddress (= 0.1.4)
-    - MMBaseUtility/MMUtility (= 0.1.4)
-    - MMBaseUtility/MultipleThread (= 0.1.4)
-    - MMBaseUtility/PHPhotoLibrary (= 0.1.4)
-    - MMBaseUtility/Timer (= 0.1.4)
-    - MMBaseUtility/UIDevice (= 0.1.4)
-    - MMBaseUtility/Util (= 0.1.4)
-  - MMBaseUtility/DispatchSource (0.1.4):
+  - MMBaseUtility (0.1.6):
+    - MMBaseUtility/DispatchSource (= 0.1.6)
+    - MMBaseUtility/Header (= 0.1.6)
+    - MMBaseUtility/KeyChain (= 0.1.6)
+    - MMBaseUtility/MDLinkedMap (= 0.1.6)
+    - MMBaseUtility/MDQueue (= 0.1.6)
+    - MMBaseUtility/MDStack (= 0.1.6)
+    - MMBaseUtility/MDWeakProxy (= 0.1.6)
+    - MMBaseUtility/MFInetAddress (= 0.1.6)
+    - MMBaseUtility/MMUtility (= 0.1.6)
+    - MMBaseUtility/MultipleThread (= 0.1.6)
+    - MMBaseUtility/PHPhotoLibrary (= 0.1.6)
+    - MMBaseUtility/Timer (= 0.1.6)
+    - MMBaseUtility/UIDevice (= 0.1.6)
+    - MMBaseUtility/Util (= 0.1.6)
+  - MMBaseUtility/DispatchSource (0.1.6):
     - MMBaseUtility/Header
-  - MMBaseUtility/Header (0.1.4)
-  - MMBaseUtility/KeyChain (0.1.4):
+  - MMBaseUtility/Header (0.1.6)
+  - MMBaseUtility/KeyChain (0.1.6):
     - MMBaseUtility/Header
-  - MMBaseUtility/MDLinkedMap (0.1.4):
+  - MMBaseUtility/MDLinkedMap (0.1.6):
     - MMBaseUtility/Header
-  - MMBaseUtility/MDQueue (0.1.4):
+  - MMBaseUtility/MDQueue (0.1.6):
     - MMBaseUtility/Header
-  - MMBaseUtility/MDStack (0.1.4):
+  - MMBaseUtility/MDStack (0.1.6):
     - MMBaseUtility/Header
-  - MMBaseUtility/MDWeakProxy (0.1.4):
+  - MMBaseUtility/MDWeakProxy (0.1.6):
     - MMBaseUtility/Header
-  - MMBaseUtility/MFInetAddress (0.1.4):
+  - MMBaseUtility/MFInetAddress (0.1.6):
     - MMBaseUtility/Header
-  - MMBaseUtility/MMUtility (0.1.4):
+  - MMBaseUtility/MMUtility (0.1.6):
     - MMBaseUtility/Header
-  - MMBaseUtility/MultipleThread (0.1.4):
+  - MMBaseUtility/MultipleThread (0.1.6):
     - MMBaseUtility/Header
-  - MMBaseUtility/PHPhotoLibrary (0.1.4):
+  - MMBaseUtility/PHPhotoLibrary (0.1.6):
     - MMBaseUtility/Header
-  - MMBaseUtility/Timer (0.1.4):
+  - MMBaseUtility/Timer (0.1.6):
     - MMBaseUtility/Header
-  - MMBaseUtility/UIDevice (0.1.4):
+  - MMBaseUtility/UIDevice (0.1.6):
     - MMBaseUtility/Header
-  - MMBaseUtility/Util (0.1.4):
+  - MMBaseUtility/Util (0.1.6):
     - MMBaseUtility/Header
-  - MMFrameManager (0.1.9.2):
-    - MMBaseUtility
+  - MMFrameManager (0.1.12)
   - MMSBaseFoundation (0.0.13)
   - MMSUIBaseFoundation (0.0.13):
     - MMFrameManager
 
 DEPENDENCIES:
   - MMBaseFoundation (= 0.1.0)
+  - MMBaseUtility (= 0.1.6)
   - MMSBaseFoundation (= 0.0.13)
   - MMSUIBaseFoundation (from `https://git.wemomo.com/ios/BaseFoundationLayer/MMSUIBaseFoundation.git`, branch `jenkins_test`)
 
@@ -105,11 +105,11 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   MMBaseFoundation: e7f65b6adce7e7f259161f956ee8fe3f97161c03
-  MMBaseUtility: dfdf6ae3b2930edba2404f24693627f984da99d9
-  MMFrameManager: d854789f04e41ea217ec720d1bd53fb9b2208809
+  MMBaseUtility: a7b1d482d304b53f573f1538f51d7d6a0efcb857
+  MMFrameManager: d64bdbe6c24929df06a2d1452b225d05984a5e74
   MMSBaseFoundation: 6f9dd7bc60aa344e7aaeee5af3d05fea0edb6714
   MMSUIBaseFoundation: aa4b85977376268a65045b43cd5de241f29f4f4a
 
-PODFILE CHECKSUM: 6d49626c600aead5ac7148127da4c7b47fc6461a
+PODFILE CHECKSUM: 37b6d0e6c33ca4ee3641e93930d8305085f95cac
 
 COCOAPODS: 1.11.2

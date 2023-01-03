@@ -22,6 +22,7 @@ install! 'cocoapods',
 :disable_input_output_paths => true,
 :preserve_pod_file_structure => true,
 :warn_for_unused_master_specs_repo => false
+#plugin 'cocoapods-mapfile'
 
 platform :ios, '12.0'
 
@@ -34,6 +35,10 @@ target :SwiftBuild_demo do
     pod 'MMSBaseFoundation', '0.0.13'
 #    pod 'SVGAPlayer'
     pod 'MMBaseFoundation', '0.1.0'
+    pod 'MMBaseFoundation', '0.1.0'
+
+    pod 'MMBaseUtility', '0.1.6'
+
 
 
 end

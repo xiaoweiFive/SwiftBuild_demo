@@ -1,0 +1,28 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/momo/Library/Developer/Xcode/DerivedData/SwiftBuild_demo-hfslihqnlzlptgcyrwtoviobesvi/Build/Products/Debug-iphonesimulator/Pods-SwiftBuild_demo/Pods_SwiftBuild_demo.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-SwiftBuild_demo-umbrella.h",
+          'external-contents': "/Users/momo/SwiftBuild_demo/Pods/Target Support Files/Pods-SwiftBuild_demo/Pods-SwiftBuild_demo-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/momo/Library/Developer/Xcode/DerivedData/SwiftBuild_demo-hfslihqnlzlptgcyrwtoviobesvi/Build/Products/Debug-iphonesimulator/Pods-SwiftBuild_demo/Pods_SwiftBuild_demo.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/momo/Library/Developer/Xcode/DerivedData/SwiftBuild_demo-hfslihqnlzlptgcyrwtoviobesvi/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Pods-SwiftBuild_demo.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

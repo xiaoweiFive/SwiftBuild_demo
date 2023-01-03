@@ -7,13 +7,24 @@
 //
 
 #import "FrameManager.h"
-#import <MMBaseUtility/MMBaseUtility.h>
 
 @implementation FrameManager
 
 + (BOOL)isIPhoneX
 {
-    return [[UIDevice currentDevice] isIPhoneX];
+    static BOOL is = NO;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        CGFloat height = [UIApplication sharedApplication].statusBarFrame.size.height;
+        if (height <= 20) {
+            UIWindow *win = [UIApplication sharedApplication].keyWindow;
+            is = win.safeAreaInsets.bottom > 0;
+        } else {
+            is = YES;
+        }
+    });
+    
+    return is;
 }
 
 + (CGFloat)screenWidth
@@ -26,16 +37,24 @@
     return MDScreenHeight;
 }
 
+static CGFloat statusbarHeight = 0;
 + (CGFloat)statusBarHeight
 {
-    CGFloat height = 20.f;
-    if ([self isIPhoneX]) {
-        if (@available(iOS 11.0, *)) {
-            UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
-            height = window.safeAreaInsets.top;
-        }
+    if (statusbarHeight > 0) {
+        return statusbarHeight;
     }
     
+    CGFloat height = [UIApplication sharedApplication].statusBarFrame.size.height;
+    if (height > 0) {
+        statusbarHeight = height;
+    } else {
+        if ([self isIPhoneX]) {
+            UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
+            height = window.safeAreaInsets.top;
+        } else {
+            height = 20;
+        }
+    }
     return height;
 }
 

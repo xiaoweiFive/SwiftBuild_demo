@@ -93,7 +93,7 @@ CGRectMake((x) * MDAdapterScale, (y) * MDAdapterScale, (width) * MDAdapterScale,
 + (CGFloat)sensorHousingHeight __attribute__((deprecated("此方法不推荐使用用,返回的是statusBar的高度，如果需要刘海的固定高度请使用sensorReservedHeight方法")));
 
 //返回刘海的高度，业务方使用的时候需要自己判断当前屏幕的方向
-+ (CGFloat)sensorReservedHeight;
+//+ (CGFloat)sensorReservedHeight;
 
 // 刘海屏时底部保留高度，非刘海屏或iPad返回0
 + (CGFloat)homeIndicatorHeight;

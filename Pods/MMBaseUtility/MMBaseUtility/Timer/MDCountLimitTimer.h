@@ -5,6 +5,7 @@
 //  Created by Hanx on 12-9-28.
 //  Copyright (c) 2012年 wemomo.com. All rights reserved.
 //
+// TODO: 废弃：使用MFTimer替换
 
 #import <Foundation/Foundation.h>
 
